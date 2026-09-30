@@ -37,13 +37,11 @@ public class baseClass {
 		p.load(file);
 		logger =LogManager.getLogger(this.getClass());
 		//switch (browser) {case 1:break;
-		driver=new ChromeDriver();
 		//case 2: driver= new EdgeDriver();break;
 		//default:System.out.println("Invalid Browser");
 		//	return;
 		//}
-		
-		
+		driver=new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		exWait= new WebDriverWait(driver, Duration.ofSeconds(5));
 		driver.get(p.getProperty("URL"));

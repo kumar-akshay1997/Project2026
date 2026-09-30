@@ -35,6 +35,9 @@ public class loginPage extends testBase {
 	@FindBy(xpath = "//button[text()='Signup' ]")
 	WebElement signupBtnElement;
 	
+	@FindBy(xpath = "//p[contains(text(),'Email Address already exist!')]")
+	WebElement invalidSignupMessageElement;
+	
 	public String loginTextcheck() {
 		try {
 	return	(loginTextElement.getText());
@@ -77,6 +80,10 @@ public class loginPage extends testBase {
 	
 	public void clickloginbtn() {
 		loginBtnElement.click();
+	}
+	
+	public String invalidsignupMessage() {
+	return	invalidSignupMessageElement.getText();
 	}
 
 }
